@@ -14,21 +14,10 @@ function sayHello(){
 const App = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.upper_view_container}>
-        <Text>
-          Check-up Codes
-        </Text>
-      </View>
-      <View style={styles.middle_view_container}>
-        <Text>
-          Hi
-        </Text>
-      </View>
-      <View style={styles.bottom_view_container}>
-        <Text>
-          Yazilim Geliştirme Dünyasi
-        </Text>
-      </View>
+      <View style={styles.box_1} />
+      <View style={styles.box_2} />
+      <View style={styles.box_3} />
+      <View style={styles.box_4} />
     </SafeAreaView>
   );
 };
@@ -36,19 +25,30 @@ const App = () => {
 const styles = StyleSheet.create({
   container:{
     flex:1,
-    flexDirection:'column',
+    flexDirection:'row-reverse',
+    backgroundColor:'black',
+    justifyContent:'space-around', 
+    alignItems:'center',
   },
-  upper_view_container:{
-    flex:1,
+  box_1:{
+    width:75,
+    height:75,
     backgroundColor:'red',
   },
-  bottom_view_container:{
-    flex:1,
-    backgroundColor:'blue',
-  },
-  middle_view_container:{
-    flex:1,
+  box_2:{
+    width:75,
+    height:75,
     backgroundColor:'green',
+  },
+  box_3:{
+    width:75,
+    height:75,
+    backgroundColor:'yellow',
+  },
+  box_4:{
+    width:75,
+    height:75,
+    backgroundColor:'orange',
   },
 });
 
