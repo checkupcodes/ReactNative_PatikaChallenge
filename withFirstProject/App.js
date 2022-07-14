@@ -5,7 +5,7 @@
 /* Components Y */
 
 import React from 'react';
-import {View, Text, SafeAreaView, Button} from 'react-native';
+import {View, Text, SafeAreaView, Button ,StyleSheet} from 'react-native';
 
 function sayHello(){
   console.log('Cekap');
@@ -14,7 +14,7 @@ function sayHello(){
 const App = () => {
   return (
     <SafeAreaView>
-      <View style={{backgroundColor:'blue'}}>
+      <View style={styles.container}>
         <Text>Cekap</Text>
         <Text>Check-up Codes</Text>
       </View>
@@ -32,4 +32,15 @@ const App = () => {
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container:{
+    backgroundColor:'red',
+    margin:20,
+    padding:10,
+    borderRadius:5,
+
+  },
+});
+
 export default App;
