@@ -13,33 +13,42 @@ function sayHello(){
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        <Text>Cekap</Text>
-        <Text>Check-up Codes</Text>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.upper_view_container}>
+        <Text>
+          Check-up Codes
+        </Text>
       </View>
-      <Text>Hi Chat</Text>
-      <Button 
-        title="Press me" 
-        onPress={()=>{console.log('Hi');}}
-        color="cyan" 
-        />
-      <Button 
-        title="Press me" 
-        onPress={sayHello}
-        disabled
-        />
+      <View style={styles.middle_view_container}>
+        <Text>
+          Hi
+        </Text>
+      </View>
+      <View style={styles.bottom_view_container}>
+        <Text>
+          Yazilim Geliştirme Dünyasi
+        </Text>
+      </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container:{
+    flex:1,
+    flexDirection:'column',
+  },
+  upper_view_container:{
+    flex:1,
     backgroundColor:'red',
-    margin:20,
-    padding:10,
-    borderRadius:5,
-
+  },
+  bottom_view_container:{
+    flex:1,
+    backgroundColor:'blue',
+  },
+  middle_view_container:{
+    flex:1,
+    backgroundColor:'green',
   },
 });
 
