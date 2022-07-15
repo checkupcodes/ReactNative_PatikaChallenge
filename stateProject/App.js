@@ -11,9 +11,14 @@ import {
 
 function App() {
   const [number, setNumber] = useState(0);
+
   useEffect(() => {
     console.log('number update' + number);
   }, [number]);
+
+  useEffect(() => {
+    console.log('Mounting...');
+  }, []);
 
   function updateCounter() {
     console.log('1. state value :' + number);
