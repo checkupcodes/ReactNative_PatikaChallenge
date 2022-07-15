@@ -11,20 +11,21 @@ import {
 
 function App() {
   const [number, setNumber] = useState(0);
-  const [counter, setCounter] = useState(10);
   useEffect(() => {
-    Alert.alert('number');
+    console.log('number update' + number);
   }, [number]);
-  useEffect(() => {
-    Alert.alert('counter');
-  }, [counter]);
+
+  function updateCounter() {
+    console.log('1. state value :' + number);
+    setNumber(number + 1);
+    console.log('2. state value :' + number);
+  }
+
   return (
     <SafeAreaView>
-      <Text>Button click</Text>
-      <Text>Number : {number}</Text>
-      <Text>Counter : {counter}</Text>
-      <Button title="Click" onPress={() => setNumber(number + 1)} />
-      <Button title="Update Counter" onPress={() => setCounter(counter + 10)} />
+      <Text>LifeCyn</Text>
+      <Text>Number{number}</Text>
+      <Button title="up" onPress={updateCounter}></Button>
     </SafeAreaView>
   );
 }
