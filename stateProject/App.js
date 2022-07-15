@@ -10,28 +10,33 @@ import {
 } from 'react-native';
 
 function App() {
-  const [number, setNumber] = useState(0);
+  const [helloFlag, setHelloFlag] = useState(true);
 
-  useEffect(() => {
-    console.log('number update' + number);
-  }, [number]);
-
-  useEffect(() => {
-    console.log('Mounting...');
-  }, []);
-
-  function updateCounter() {
-    console.log('1. state value :' + number);
-    setNumber(number + 1);
-    console.log('2. state value :' + number);
+  function updateFlag() {
+    setHelloFlag(!helloFlag);
   }
 
   return (
     <SafeAreaView>
-      <Text>LifeCyn</Text>
-      <Text>Number{number}</Text>
-      <Button title="up" onPress={updateCounter}></Button>
+      <Text>Hello Lifecycle</Text>
+      <Button title="up" onPress={updateFlag}></Button>
+      {helloFlag && <Hello />}
     </SafeAreaView>
   );
 }
 export default App;
+
+function Hello() {
+  useEffect(() => {
+    console.log('Merhaba dünya');
+
+    return () => {
+      console.log('Gidiyorum bütün aşklar yüreğimde');
+    };
+  }, []);
+  return (
+    <View style={{backgroundColor: 'green', padding: 10}}>
+      <Text>Bir varmis bir yokmus</Text>
+    </View>
+  );
+}
