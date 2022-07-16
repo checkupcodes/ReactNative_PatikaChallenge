@@ -4,9 +4,11 @@ export default StyleSheet.create({
     padding: 5,
     paddingLeft: 50,
     paddingRight: 50,
+    marginLeft: 50,
+    marginRight: 50,
     backgroundColor: '#1976d2',
     borderRadius: 10,
-    margin: 5,
+    margin: 50,
   },
   text: {
     color: 'white',
