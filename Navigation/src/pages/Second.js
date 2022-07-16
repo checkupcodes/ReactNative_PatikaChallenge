@@ -22,5 +22,5 @@ export default Second;
 const styles = StyleSheet.create({
   container: {flex: 1, alignItems: 'center', justifyContent: 'center'},
   text: {fontSize: 40, fontWeight: '800'},
-  text2: {fontSize: 15, fontWeight:'500'},
+  text2: {fontSize: 15, fontWeight: '500'},
 });
