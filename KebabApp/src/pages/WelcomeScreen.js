@@ -4,11 +4,14 @@ import {Text, StyleSheet} from 'react-native';
 
 import Button from '../components/Button/Button';
 
-function Welcome() {
+function Welcome({navigation}) {
+  function goToSingIn() {
+    navigation.navigate('SingInScreen');
+  }
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.header}>Mac Fitness Saloon</Text>
-      <Button text="Submit" onPress={null} />
+      <Button text="Sign in" onPress={goToSingIn} />
     </SafeAreaView>
   );
 }
