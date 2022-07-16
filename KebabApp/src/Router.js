@@ -5,6 +5,8 @@ import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import Welcome from './pages/WelcomeScreen';
+
 function HomeScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -18,7 +20,9 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator></Stack.Navigator>
+      <Stack.Navigator>
+        <Stack.Screen name="WelcomeScreen" component={Welcome} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
