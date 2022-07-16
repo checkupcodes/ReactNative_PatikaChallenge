@@ -4,7 +4,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 
 const First = props => {
   function navigateToPage() {
-    props.navigation.navigate('SecondPage');
+    props.navigation.navigate('SecondPage', {username: 'checkupcodes'});
   }
   return (
     <SafeAreaView style={styles.container}>
