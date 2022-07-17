@@ -5,7 +5,7 @@ import Button from '../components/Button';
 
 import Input from '../components/Input/Input';
 
-function SingIn() {
+function SingIn(navigation) {
   const [username, setUserName] = useState(null);
   const [surname, setSurname] = useState(null);
   const [age, setAge] = useState(null);
@@ -14,7 +14,7 @@ function SingIn() {
 
   function handleSubmit() {
     if (!username || !surname || !age || !email || !from) {
-      Alert.alert('Mac Fitness' , 'You left an empty value');
+      Alert.alert('Mac Fitness', 'You left an empty value');
     }
 
     const user = {
@@ -24,6 +24,8 @@ function SingIn() {
       email,
       from,
     };
+
+    navigation.navigate();
   }
 
   return (

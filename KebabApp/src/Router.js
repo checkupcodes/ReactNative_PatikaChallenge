@@ -7,13 +7,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import Welcome from './pages/WelcomeScreen';
 import SingIn from './pages/SignIn';
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Home Screen</Text>
-    </View>
-  );
-}
+import SingInResult from './pages/SingInResult';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,6 +20,7 @@ function App() {
         }}>
         <Stack.Screen name="WelcomeScreen" component={Welcome} />
         <Stack.Screen name="SingInScreen" component={SingIn} />
+        <Stack.Screen name="SingInResultScreen" component={SingInResult} />
       </Stack.Navigator>
     </NavigationContainer>
   );
