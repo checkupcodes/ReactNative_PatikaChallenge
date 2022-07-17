@@ -3,8 +3,7 @@
 import * as React from 'react';
 import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import First from './pages/First';
 import Second from './pages/Second';
 
@@ -21,16 +20,14 @@ import Second from './pages/Second';
 //   );
 // }
 
-const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Adam" component={First} />
-        <Tab.Screen name="Duck" component={Second} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <Drawer.Navigator>
+      <Drawer.Screen name="Adam" component={First} />
+      <Drawer.Screen name="Duck" component={Second} />
+    </Drawer.Navigator>
   );
 }
 
