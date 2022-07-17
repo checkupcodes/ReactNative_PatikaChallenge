@@ -15,6 +15,7 @@ function SingIn({navigation}) {
   function handleSubmit() {
     if (!username || !surname || !age || !email || !from) {
       Alert.alert('Mac Fitness', 'You left an empty value');
+      return;
     }
 
     const user = {
