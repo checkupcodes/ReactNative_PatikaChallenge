@@ -5,7 +5,7 @@ import Button from '../components/Button';
 
 import Input from '../components/Input/Input';
 
-function SingIn(navigation) {
+function SingIn({navigation}) {
   const [username, setUserName] = useState(null);
   const [surname, setSurname] = useState(null);
   const [age, setAge] = useState(null);
@@ -25,7 +25,7 @@ function SingIn(navigation) {
       from,
     };
 
-    navigation.navigate();
+    navigation.navigate('SingInResultScreen', {user});
   }
 
   return (
