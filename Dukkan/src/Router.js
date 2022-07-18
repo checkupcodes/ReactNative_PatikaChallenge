@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, SafeAreaView} from 'react-native';
 
-function App() {
+function Router() {
   return (
     <SafeAreaView>
       <View>
@@ -11,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default Router;
