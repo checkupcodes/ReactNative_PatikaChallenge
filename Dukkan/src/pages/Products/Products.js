@@ -1,14 +1,16 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {FlatList, SafeAreaView, Text, View} from 'react-native';
 import styles from './Products.style';
 
 import Config from 'react-native-config';
 
 const Products = () => {
+  const renderProduct = ({item}) => null;
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Hi Products {Config.API_URL}</Text>
+        <FlatList data={null} renderItem={renderProduct} />
       </View>
     </SafeAreaView>
   );
