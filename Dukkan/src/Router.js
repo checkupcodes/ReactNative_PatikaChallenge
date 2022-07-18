@@ -1,13 +1,22 @@
 import React from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import {} from 'react-native';
+
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+import Products from './pages/Products/Products';
+import Details from './pages/Details/Details';
+
+const Stack = createNativeStackNavigator();
 
 function Router() {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>Check-up Codes</Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Products Page" component={Products} />
+        <Stack.Screen name="Details Page" component={Details} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
