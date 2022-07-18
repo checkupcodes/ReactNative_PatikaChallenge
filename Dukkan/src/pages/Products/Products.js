@@ -5,6 +5,8 @@ import axios from 'axios';
 
 import Config from 'react-native-config';
 
+import ProductCard from '../../components/ProductCard';
+
 const Products = () => {
   const [data, setData] = useState([]);
 
@@ -17,7 +19,7 @@ const Products = () => {
     setData(productData);
   };
 
-  const renderProduct = ({item}) => <Text>{item.title}</Text>;
+  const renderProduct = ({item}) => <ProductCard product={item} />;
 
   return (
     <SafeAreaView style={styles.container}>
