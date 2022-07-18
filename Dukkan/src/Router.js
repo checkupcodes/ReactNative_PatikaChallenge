@@ -13,8 +13,26 @@ function Router() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Products Page" component={Products} />
-        <Stack.Screen name="Details Page" component={Details} />
+        <Stack.Screen
+          name="ProductsPage"
+          component={Products}
+          options={{
+            title: 'Products',
+            headerStyle: {backgroundColor: '#64b5f6'},
+            headerTitleStyle: {color: 'white'},
+            headerTintColor: 'white',
+          }}
+        />
+        <Stack.Screen
+          name="DetailsPage"
+          component={Details}
+          options={{
+            title: 'Details',
+            headerStyle: {backgroundColor: '#64b5f6'},
+            headerTitleStyle: {color: 'white'},
+            headerTintColor: 'white',
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

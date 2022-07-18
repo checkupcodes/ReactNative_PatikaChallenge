@@ -13,10 +13,16 @@ import Config from 'react-native-config';
 import ProductCard from '../../components/ProductCard';
 import useFetch from '../../hooks/useFetch';
 
-const Products = () => {
+const Products = ({navigation}) => {
   const {loading, data, error} = useFetch(Config.API_URL);
 
-  const renderProduct = ({item}) => <ProductCard product={item} />;
+  const handleProductSelect = () => {
+    navigation.navigate('DetailsPage');
+  };
+
+  const renderProduct = ({item}) => (
+    <ProductCard product={item} onSelect={handleProductSelect} />
+  );
 
   if (loading) {
     return <ActivityIndicator size="large" />;
@@ -26,13 +32,7 @@ const Products = () => {
     return <Text>{error}</Text>;
   }
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <FlatList data={data} renderItem={renderProduct} />
-      </View>
-    </SafeAreaView>
-  );
+  return <FlatList data={data} renderItem={renderProduct} />;
 };
 
 export default Products;
