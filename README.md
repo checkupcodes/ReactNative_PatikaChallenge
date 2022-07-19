@@ -29,7 +29,7 @@ Used API: TheMealDB
 Clone this repository on your local machine.
 
 ```
-git clone https://github.com/ibrahimaykutbas/patika-react-native.git
+git clone https://github.com/checkupcodes/ReactNative_PatikaChallenge/tree/main/TarifkaApp
 ```
 
 ### Use
