@@ -18,7 +18,7 @@ function Router() {
           component={Products}
           options={{
             title: 'Products',
-            headerStyle: {backgroundColor: '#64b5f6'},
+            headerStyle: {backgroundColor: '#f3399a'},
             headerTitleStyle: {color: 'white'},
             headerTintColor: 'white',
           }}
@@ -28,7 +28,7 @@ function Router() {
           component={Details}
           options={{
             title: 'Details',
-            headerStyle: {backgroundColor: '#64b5f6'},
+            headerStyle: {backgroundColor: '#f3399a'},
             headerTitleStyle: {color: 'white'},
             headerTintColor: 'white',
           }}

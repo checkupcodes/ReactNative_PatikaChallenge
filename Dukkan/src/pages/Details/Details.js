@@ -1,13 +1,14 @@
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView, Text, View, Image} from 'react-native';
 import styles from './Details.style';
 
 const Details = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Text>Hi Details</Text>
-      </View>
+      <Image style={styles.image} />
+      <Text style={styles.title}>T</Text>
+      <Text style={styles.desc}>D</Text>
+      <Text style={styles.price}>T</Text>
     </SafeAreaView>
   );
 };
