@@ -2,7 +2,9 @@ import React from 'react';
 import {SafeAreaView, Text, View, Image} from 'react-native';
 import styles from './Details.style';
 
-const Details = () => {
+const Details = ({route}) => {
+  const {id} = route.params;
+  console.log(id);
   return (
     <SafeAreaView style={styles.container}>
       <Image style={styles.image} />

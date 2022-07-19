@@ -16,12 +16,12 @@ import useFetch from '../../hooks/useFetch';
 const Products = ({navigation}) => {
   const {loading, data, error} = useFetch(Config.API_URL);
 
-  const handleProductSelect = () => {
-    navigation.navigate('DetailsPage');
+  const handleProductSelect = id => {
+    navigation.navigate('DetailsPage', {id});
   };
 
   const renderProduct = ({item}) => (
-    <ProductCard product={item} onSelect={handleProductSelect} />
+    <ProductCard product={item} onSelect={() => handleProductSelect(item.id)} />
   );
 
   if (loading) {
