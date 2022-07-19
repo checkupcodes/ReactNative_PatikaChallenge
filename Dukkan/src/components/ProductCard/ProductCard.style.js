@@ -9,6 +9,7 @@ export default StyleSheet.create({
     borderTopLeftRadius: 20,
     margin: 3,
     flexDirection: 'row',
+    color: '#4d2d3d',
   },
   image: {
     width: 100,
